@@ -36,6 +36,7 @@ local blacklisted = {
   ["DANGEROUS_SCRIPTS_WARNING"] = true, -- it call protected function
   ["DELETE_ITEM"] = true, -- it call protected function
   ["GARRISON_SHIP_RENAME"] = true, -- it make no sence, because name of ship need to be typed before confirm
+  ["GENERIC_CONFIRMATION"] = true, -- it can't be made to work because this click eventually invokes `CraftRecipe` which will fail if not called via a hardware event 
   ["GUILDBANK_DEPOSIT"] = true, -- dialog need fill-up number it can't be automated
   ["GUILDBANK_WITHDRAW"] = true, -- dialog need fill-up number it can't be automated
   ["PET_BATTLE_FORFEIT_NO_PENALTY"] = true, -- another piece code moved to protected
