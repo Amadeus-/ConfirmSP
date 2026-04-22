@@ -21,7 +21,7 @@ local defaults = {
       ["BATTLE_PET_PUT_IN_CAGE"] = false,
       ["BUYEMALL_CONFIRM"] = false,
       ["CALENDAR_ERROR"] = false,
-      ["CLEAR_RECIPES"] = true,                                       -- "Profession Shopping List" Addon
+      ["PSL_CLEAR_RECIPES"] = true,                                   -- "Profession Shopping List" Addon
       ["CLIENT_RESTART_ALERT"] = true,
       ["CONFIM_BEFORE_USE"] = false,
       ["CONFIRM_ACCEPT_SOCKETS"] = true,
@@ -114,7 +114,7 @@ local function orderedNext(t, state)
     t.__orderedIndex = __genOrderedIndex( t )
     key = t.__orderedIndex[1]
   else
-    for i = 1,table.getn(t.__orderedIndex) do
+    for i = 1, #t.__orderedIndex do
       if t.__orderedIndex[i] == state then
         key = t.__orderedIndex[i+1]
       end
